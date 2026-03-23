@@ -57,7 +57,7 @@ const HeroGamified = () => {
           className="mt-12"
         >
           <button className="group relative px-8 py-4 bg-blue-600 font-black uppercase tracking-widest text-sm skew-x-[-15deg] hover:bg-white hover:text-blue-600 transition-all shadow-[8px_8px_0px_#1e3a8a] hover:shadow-none hover:translate-x-2 hover:translate-y-2">
-            Siapakah Saya?
+            Penasaran Dengan Saya?
             <span className="absolute -top-1 -right-1 w-2 h-2 bg-white group-hover:bg-blue-600"></span>
           </button>
         </motion.div>

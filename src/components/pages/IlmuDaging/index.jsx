@@ -1,9 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Beaker, Globe, BrainCircuit, Terminal, Cpu, Database, CassetteTape, PhoneCall, PhoneIcon, Smartphone } from 'lucide-react';
 import Footer from '../../../components/Footer';
+// import HansAi from './HansAi';
+import { title } from 'framer-motion/client';
 
 const IlmuDagingPage = () => {
+  const navigate = useNavigate();
   // Data Kartu (Tech Stack asli dari CV Hans)
   const orbitItems = [
     { icon: <BrainCircuit size={30} />, title: "ML Lab", tech: "Python, TensorFlow", color: "border-blue-500", glow: "shadow-blue-900/40" },
@@ -19,6 +23,12 @@ const IlmuDagingPage = () => {
   // Jari-jari Elips (Proporsi Saturnus)
   const radiusX = 450; // Lebar elips
   const radiusY = 120; // Tinggi elips (tipis agar terlihat pipih seperti cincin)
+
+  const handlerCardClick = (title) =>{
+    if (title === 'ML Lab'){
+      navigate('/IlmuDaging/tanya-jawab');
+    }
+  }
 
   return (
     <div className="bg-[#020617] min-h-screen text-white flex flex-col font-sans overflow-x-hidden relative">
@@ -54,6 +64,7 @@ const IlmuDagingPage = () => {
             return (
               <motion.div
                 key={index}
+                onClick={() => handlerCardClick(item.title)}
                 className={`absolute w-60 p-6 bg-slate-900/80 border ${item.color} ${item.glow} shadow-2xl rounded-[2rem] backdrop-blur-sm cursor-pointer group flex flex-col items-center text-center`}
                 style={{
                   // Posisi X dan Y menggunakan rumus elips (sin/cos)
