@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// Ganti BrowserRouter menjadi HashRouter agar aman dari error 404 saat refresh di GitHub Pages
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/pages/Home/index';
 import Service from './components/pages/Service/index';
@@ -14,15 +15,18 @@ function App() {
       <div className="bg-[#020617] text-white min-h-screen">
         <Navbar />
         <Routes>
-          {/* Ini untuk halaman utama */}
+          {/* Halaman Utama */}
           <Route path="/" element={<Home />} />
           <Route path="/about-me" element={<AboutMePage />} />
           <Route path="/service" element={<Service />} />
           <Route path="/project" element={<Project />} />
           <Route path="/IlmuDaging" element={<IlmuDaging />} />
 
-          {/* Ini untuk halaman selanjutnya */}
-          <Route path ="/IlmuDaging/tanya-jawab" element={<TanyaJawab />} />
+          {/* Halaman Detail */}
+          <Route path="/IlmuDaging/tanya-jawab" element={<TanyaJawab />} />
+
+          {/* CATCH-ALL: Jika user nyasar, lempar balik ke Home */}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
     </Router>
