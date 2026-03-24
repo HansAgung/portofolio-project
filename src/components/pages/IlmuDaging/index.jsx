@@ -48,7 +48,7 @@ const IlmuDagingPage = () => {
           <h2 className="text-blue-500 font-mono tracking-[0.4em] text-xs uppercase opacity-70">
             [ KNOWLEDGE_ORBIT_SYSTEM ]
           </h2>
-          <h1 className="text-5xl md:text-8xl font-black italic uppercase tracking-tighter leading-none text-white">
+          <h1 className="text-5xl md:text-7xl font-black italic uppercase tracking-tighter leading-none text-white">
             Ilmu <span className="text-blue-600">Daging</span>
           </h1>
           <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full opacity-50 mt-4" />
@@ -130,10 +130,10 @@ const IlmuDagingPage = () => {
           transition={{ duration: 0.8 }}
           className="text-center space-y-8 max-w-4xl z-10 pt-16 border-t border-white/5"
         >
-          <h1 className="text-4xl md:text-7xl font-black uppercase italic tracking-tighter leading-none text-white">
+          <h1 className="text-4xl md:text-6xl font-black uppercase italic tracking-tighter leading-none text-white">
             Architecture of <span className="text-blue-600">Pure Talent</span>
           </h1>
-          <p className="text-slate-400 text-sm md:text-lg leading-relaxed max-w-2xl mx-auto font-medium py-3 bg-blue-600/5 px-6 rounded-3xl border border-blue-950/20">
+          <p className="text-slate-400 text-md md:text-md leading-relaxed max-w-2xl mx-auto font-medium py-3 bg-blue-600/5 px-6 rounded-3xl border border-blue-950/20">
             Saya mengintegrasikan keahlian teknis tingkat lanjut dari dunia <span className="text-white font-bold">ML Laboratory</span> dengan update industri <span className="text-white font-bold">Info Tech</span> untuk membangun sistem digital yang skalabel dan efisien.
           </p>
           

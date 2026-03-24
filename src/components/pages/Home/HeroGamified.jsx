@@ -1,7 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
-// Menggunakan penamaan file sesuai instruksi Anda
 import photo1 from '../../../assets/1.jpeg';
 import photo2 from '../../../assets/2.jpeg';
 import photo3 from '../../../assets/3.jpeg';

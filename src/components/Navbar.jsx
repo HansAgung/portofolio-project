@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom'; // Import Link
 const Navbar = () => {
   // Mapping menu ke path URL
   const menuItems = [
-    { label: "Tentang saya", path: "/about-me" },
-    { label: "Layanan Saya", path: "/service" },
-    { label: "Hans.Dev", path: "/" }, // Logo ke Home
+    { label: "Siapa saya", path: "/about-me" },
+    { label: "Bantu Saya", path: "/service" },
+    { label: "Hans.Dev", path: "/" },
     { label: "Projek Saya", path: "/project" },
     { label: "IlmuDaging", path: "/IlmuDaging" },
   ];

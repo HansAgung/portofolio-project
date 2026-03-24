@@ -9,17 +9,19 @@ html, body {
   padding: 0;
   background-color: var(--bg-dark);
   color: white;
-  /* Opsional: Scroll Snapping agar saat scroll otomatis berhenti di tiap section */
-  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  /* Hapus scroll-snap di sini jika membuat scroll terasa berat/kaku */
 }
 
 section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
   width: 100%;
-  height: 100vh; /* Memaksa tinggi setinggi layar */
+  /* Ganti height: 100vh menjadi min-height agar bisa memanjang ke bawah */
+  min-height: 100vh; 
   display: flex;
   position: relative;
-  overflow: hidden;
+  /* Hapus overflow: hidden agar konten tidak terpotong */
+  overflow: visible; 
 }
+
+/* Khusus untuk HeroBio yang ingin tetap pas satu layar, 
+   kita bisa tambahkan class khusus nanti di komponennya */
