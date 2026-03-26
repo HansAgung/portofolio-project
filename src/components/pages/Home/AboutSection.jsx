@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import RubikCube from './RubikCube';
+import { NavHashLink } from 'react-router-hash-link';
 
 const AboutSection = () => {
   return (
@@ -31,9 +32,14 @@ const AboutSection = () => {
         </p>
         
         <div className="flex flex-wrap gap-4 pt-4">
-          <button className="px-8 py-4 bg-blue-600 text-white font-black uppercase skew-x-[-10deg] hover:scale-105 hover:bg-blue-500 transition-all shadow-[5px_5px_0px_#1e3a8a] active:shadow-none active:translate-x-1 active:translate-y-1">
-            Lihat Project
-          </button>
+          <NavHashLink
+            smooth 
+            to="/service#service-list"
+          >
+            <button className="px-8 py-4 bg-blue-600 text-white font-black uppercase skew-x-[-10deg] hover:scale-105 hover:bg-blue-500 transition-all shadow-[5px_5px_0px_#1e3a8a] active:shadow-none active:translate-x-1 active:translate-y-1">
+              Layanan Saya
+            </button>
+          </NavHashLink>
           <button className="px-8 py-4 border-2 border-blue-600 text-blue-500 font-black uppercase skew-x-[-10deg] hover:bg-blue-600 hover:text-white transition-all">
             Download CV
           </button>

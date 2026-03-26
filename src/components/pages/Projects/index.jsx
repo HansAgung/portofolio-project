@@ -16,7 +16,9 @@ const ProjectsPage = () => {
       <main className="flex-grow pt-32 pb-20 px-6 md:px-10 w-full flex flex-col items-center relative z-10">
         
         {/* Realm Map Section */}
-        <RealmMap onRealmClick={setSelectedRealm} />
+        <RealmMap 
+        id='show-project'
+        onRealmClick={setSelectedRealm} />
         
       </main>
 

@@ -55,7 +55,7 @@ const ServicesPage = () => {
         </div>
 
         {/* Tabel Harga yang Terkoneksi dengan Diskon */}
-        <div className="mb-32">
+        <div id='service-list' className="mt-10 mb:mt-10 mb-32">
           <h2 className="text-2xl font-black italic uppercase text-center mb-12 tracking-tighter text-white underline decoration-blue-500 underline-offset-8">
             Service Packages
           </h2>
