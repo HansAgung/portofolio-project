@@ -8,6 +8,7 @@ import AboutMePage from './components/pages/About Me/index';
 import Project from './components/pages/Projects/index';
 import IlmuDaging from './components/pages/IlmuDaging/index';
 import TanyaJawab from './components/pages/IlmuDaging/HansAi';
+import ForumIlmu from './components/pages/IlmuDaging/ForumIlmu';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
 
           {/* Halaman Detail */}
           <Route path="/IlmuDaging/tanya-jawab" element={<TanyaJawab />} />
+          <Route path="/IlmuDaging/forum-ilmu" element={<ForumIlmu />} />
 
           {/* CATCH-ALL: Jika user nyasar, lempar balik ke Home */}
           <Route path="*" element={<Navigate to="/" replace />} />

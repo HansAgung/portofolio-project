@@ -35,6 +35,14 @@ const OrbitSystem = () => {
 
   const totalItems = orbitItems.length;
 
+  const handleOrbitClick = (title) => {
+    if (title === 'ML Lab'){
+      navigate('/IlmuDaging/tanya-jawab');
+    } else {
+      navigate('/IlmuDaging/forum-ilmu');
+    }
+  }
+
   return (
     <div className="relative w-full h-full flex justify-center items-center">
       {orbitItems.map((item, index) => {
@@ -43,7 +51,7 @@ const OrbitSystem = () => {
         return (
           <motion.div
             key={index}
-            onClick={() => item.title === 'ML Lab' && navigate('/IlmuDaging/tanya-jawab')}
+            onClick={() => handleOrbitClick(item.title)}
             className={`absolute p-3 md:p-6 bg-slate-900/90 border-2 ${item.color} ${item.glow} shadow-2xl rounded-[1.5rem] md:rounded-[2rem] backdrop-blur-md cursor-pointer group flex flex-col items-center text-center`}
             style={{ 
                 width: dimensions.cardWidth,
