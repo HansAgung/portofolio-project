@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import photo1 from '../../../assets/1.jpeg';
 import photo2 from '../../../assets/2.jpeg';
 import photo3 from '../../../assets/3.jpeg';
+import { NavHashLink } from 'react-router-hash-link';
 
 const HeroGamified = () => {
   const images = [photo2, photo1, photo3];
@@ -48,17 +49,14 @@ const HeroGamified = () => {
           </span>
         </motion.h1>
 
-        <motion.div 
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ type: "spring", delay: 0.5 }}
-          className="mt-12"
+        <NavHashLink
+          smooth 
+          to="/about-me#experience-section"
+          className="group relative mt-10 md:mt-10 px-8 py-4 bg-blue-600 font-black uppercase tracking-widest text-sm skew-x-[-15deg] hover:bg-white hover:text-blue-600 transition-all shadow-[8px_8px_0px_#1e3a8a] hover:shadow-none hover:translate-x-2 hover:translate-y-2 inline-block"
         >
-          <button className="group relative px-8 py-4 bg-blue-600 font-black uppercase tracking-widest text-sm skew-x-[-15deg] hover:bg-white hover:text-blue-600 transition-all shadow-[8px_8px_0px_#1e3a8a] hover:shadow-none hover:translate-x-2 hover:translate-y-2">
-            Penasaran Dengan Saya?
-            <span className="absolute -top-1 -right-1 w-2 h-2 bg-white group-hover:bg-blue-600"></span>
-          </button>
-        </motion.div>
+          Penasaran Dengan Saya?
+          <span className="absolute -top-1 -right-1 w-2 h-2 bg-white group-hover:bg-blue-600"></span>
+        </NavHashLink>
       </div>
 
       {/* --- FLOATING HUD STATS --- */}

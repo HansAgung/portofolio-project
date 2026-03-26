@@ -24,9 +24,10 @@ const AboutMePage = () => {
 
         {/* SECTION 2: EXPERIENCE (Journey) */}
         <motion.div 
+          id="experience-section"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }} // Muncul saat 20% konten terlihat
+          viewport={{ once: true, amount: 0.2 }}
           className="mb-32"
         >
           <Experience />
